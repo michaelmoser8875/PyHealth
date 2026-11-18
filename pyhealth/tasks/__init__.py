@@ -8,6 +8,9 @@ from .competing_risks import CompetingRisksPreprocessor as CompetingRisksPreproc
 from .competing_risks_pbc import CompetingRisksPBC as CompetingRisksPBC
 from .benchmark_ehrshot import BenchmarkEHRShot
 from .cancer_survival import CancerMutationBurden, CancerSurvivalPrediction
+from .bmd_hs_binary_classification import (
+    BMDHSBinaryClassification as BMDHSBinaryClassification,
+)
 from .bmd_hs_disease_classification import BMDHSDiseaseClassification
 from .cardiology_detect import (
     cardiology_isAD_fn,
