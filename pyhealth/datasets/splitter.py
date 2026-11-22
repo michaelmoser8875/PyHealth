@@ -489,6 +489,55 @@ def split_by_patient(
     return train_dataset, val_dataset, test_dataset
 
 
+def split_by_patient_fixed_test(
+    dataset: SampleDataset,
+    seed: int,
+    test_ratio: float = 0.2,
+    val_ratio: float = 0.2,
+    test_seed: int = 0,
+) -> tuple:
+    """Splits by patient with a test set that stays fixed across seeds.
+
+    The test patients are drawn once with ``test_seed``; ``seed`` then only
+    reshuffles the remaining patients into train and validation. This gives
+    repeated runs (e.g. mean and SD over 5 seeds) one shared test set, which
+    :func:`split_by_patient` does not, since its ``seed`` moves every part.
+
+    Args:
+        dataset: A ``SampleDataset`` with ``patient_to_index``.
+        seed: Seed for the train/validation shuffle of the non-test patients.
+        test_ratio: Fraction of all patients in the test part.
+        val_ratio: Fraction of the non-test patients in the validation part.
+        test_seed: Seed for choosing the test patients.
+
+    Returns:
+        train_dataset, val_dataset, test_dataset: ``dataset.subset`` views.
+
+    Examples:
+        >>> from pyhealth.datasets import create_sample_dataset
+        >>> samples = [{"patient_id": f"p{i}", "feature": i, "label": i % 2}
+        ...            for i in range(10)]
+        >>> dataset = create_sample_dataset(
+        ...     samples, {"feature": "raw"}, {"label": "raw"}
+        ... )
+        >>> _, _, test_a = split_by_patient_fixed_test(dataset, seed=1)
+        >>> _, _, test_b = split_by_patient_fixed_test(dataset, seed=2)
+        >>> [len(part) for part in split_by_patient_fixed_test(dataset, seed=1)]
+        [7, 1, 2]
+        >>> sorted(s["patient_id"] for s in test_a) == sorted(
+        ...     s["patient_id"] for s in test_b
+        ... )
+        True
+    """
+    patients = sorted(dataset.patient_to_index, key=str)
+    np.random.default_rng(test_seed).shuffle(patients)
+    num_test = int(len(patients) * test_ratio)
+    test, rest = patients[:num_test], sorted(patients[num_test:], key=str)
+    np.random.default_rng(seed).shuffle(rest)
+    num_val = int(len(rest) * val_ratio)
+    return split_by_subject(dataset, (rest[num_val:], rest[:num_val], test))
+
+
 def split_by_subject(
     dataset: SampleDataset,
     subjects: Sequence[Sequence[str]],

@@ -42,7 +42,8 @@ class BMDHSBinaryClassification(BaseTask):
     Emits one sample per recording, labelled 1 if the patient has ``disease``
     (even alongside other diseases) and 0 if Normal. Patients with only other
     diseases follow ``other_disease_policy``. Recordings are resampled to
-    8 kHz and cropped to the first 10 s; missing recordings are skipped.
+    8 kHz and cropped to the first 10 s (SynPCG crops randomly in training
+    and at the center in evaluation); missing recordings are skipped.
 
     Attributes:
         disease (str): The disease treated as the positive class.
@@ -140,8 +141,11 @@ class BMDHSBinaryClassification(BaseTask):
         Returns:
             1 if the chosen disease is present, 0 if Normal, otherwise 0 for
             ``other_disease_policy="negative"`` or ``None`` (exclude) for
-            ``other_disease_policy="exclude"``.
+            ``other_disease_policy="exclude"``. Patients whose flags are
+            ``"N/A"`` (patient 22, mitral valve prolapse) are always excluded.
         """
+        if str(diagnosis["N"]).strip().upper() == "N/A":
+            return None
         if self._flag(diagnosis, self.disease):
             return 1
         if self._flag(diagnosis, "N"):

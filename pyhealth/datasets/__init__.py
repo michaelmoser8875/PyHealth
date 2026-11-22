@@ -103,6 +103,7 @@ from .splitter import (
     SubjectSplit as SubjectSplit,
     sample_balanced,
     split_by_patient,
+    split_by_patient_fixed_test as split_by_patient_fixed_test,
     split_by_patient_conformal,
     split_by_patient_conformal_tuh,
     split_by_patient_tuh,
