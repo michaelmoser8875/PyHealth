@@ -7,11 +7,10 @@ import unittest
 import torch
 import torch.nn.functional as F
 
+from examples.resnet1d.ablation import check_splits, run_ablation, smoke_datasets
+from pyhealth.datasets import get_dataloader
 from pyhealth.models import ResNet1D
 from pyhealth.trainer import Trainer
-from pyhealth.datasets import get_dataloader
-from examples.resnet1d.ablation import check_splits, smoke_datasets
-from examples.resnet1d.ablation import run_ablation
 
 
 class TestResNet1D(unittest.TestCase):
@@ -23,7 +22,7 @@ class TestResNet1D(unittest.TestCase):
         cls.train, cls.val, cls.test = smoke_datasets()
 
     def model(self, **kwargs):
-        config = dict(layers=(1, 1), base_width=4)
+        config = {"layers": (1, 1), "base_width": 4}
         config.update(kwargs)
         return ResNet1D(self.train, **config)
 
@@ -64,19 +63,27 @@ class TestResNet1D(unittest.TestCase):
 
     def test_invalid(self):
         for config in (
-            dict(layers=()),
-            dict(layers=(0,)),
-            dict(base_width=0),
-            dict(kernel_size=2),
-            dict(dropout=1),
-            dict(in_channels=0),
-            dict(pos_weight=-1),
-            dict(pos_weight=float("nan")),
-            dict(normalize="yes"),
-            dict(feature_key="bad"),
-            dict(label_key="bad"),
+            {"layers": ()},
+            {"layers": (0,)},
+            {"base_width": 0},
+            {"kernel_size": 2},
+            {"dropout": 1},
+            {"in_channels": 0},
+            {"pos_weight": -1},
+            {"pos_weight": float("nan")},
+            {"feature_key": "bad"},
+            {"label_key": "bad"},
         ):
             with self.subTest(config=config), self.assertRaises(ValueError):
+                self.model(**config)
+        for config in (
+            {"normalize": "yes"},
+            {"layers": (1, 1.5)},
+            {"base_width": "4"},
+            {"in_channels": True},
+            {"kernel_size": 3.0},
+        ):
+            with self.subTest(config=config), self.assertRaises(TypeError):
                 self.model(**config)
         for x in (
             torch.zeros(128),
@@ -177,6 +184,7 @@ class TestResNet1D(unittest.TestCase):
 
     def test_ablation_processor_guard(self):
         import copy
+
         from examples.resnet1d.ablation import _same_state
 
         state = {"weight": torch.tensor([2.0])}

@@ -68,7 +68,9 @@ class ResNet1D(BaseModel):
             ("in_channels", [in_channels]),
             ("kernel_size", [kernel_size]),
         ):
-            if not values or any(type(v) is not int or v < 1 for v in values):
+            if any(type(v) is not int for v in values):
+                raise TypeError(f"{name} must contain integers")
+            if not values or any(v < 1 for v in values):
                 raise ValueError(f"{name} must contain positive integers")
         if kernel_size % 2 != 1:
             raise ValueError("kernel_size must be odd for residual alignment")
@@ -79,7 +81,7 @@ class ResNet1D(BaseModel):
         ):
             raise ValueError("pos_weight must be positive and finite")
         if not isinstance(normalize, bool):
-            raise ValueError("normalize must be boolean")
+            raise TypeError("normalize must be boolean")
         self.feature_key, self.label_key = feature_key, label_key
         self.in_channels, self.normalize = in_channels, normalize
         self.backbone = ResNet1dBackbone(

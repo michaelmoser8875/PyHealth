@@ -115,7 +115,7 @@ def run_ablation(
             if torch.cuda.is_available():
                 torch.cuda.manual_seed_all(seed)
             torch.use_deterministic_algorithms(True)
-            config = dict(base_width=width, layers=layers)
+            config = {"base_width": width, "layers": layers}
             model = ResNet1D(train, **config)
             loader = get_dataloader(train, batch_size, shuffle=True, seed=seed)
             val_loader = get_dataloader(validation, batch_size, shuffle=False)
@@ -137,21 +137,21 @@ def run_ablation(
             name = f"run_{len(results):03d}"
             torch.save(model.state_dict(), output / f"{name}.pt")
             results.append(
-                dict(
-                    run=name,
-                    smoke=smoke,
-                    seed=seed,
-                    lr=lr,
-                    model=config,
-                    epochs=epochs,
-                    batch_size=batch_size,
-                    device=device,
-                    torch_version=torch.__version__,
-                    f1_threshold=0.5,
-                    parameters=sum(p.numel() for p in model.parameters()),
-                    seconds=time.perf_counter() - start,
-                    validation=scores,
-                )
+                {
+                    "run": name,
+                    "smoke": smoke,
+                    "seed": seed,
+                    "lr": lr,
+                    "model": config,
+                    "epochs": epochs,
+                    "batch_size": batch_size,
+                    "device": device,
+                    "torch_version": torch.__version__,
+                    "f1_threshold": 0.5,
+                    "parameters": sum(p.numel() for p in model.parameters()),
+                    "seconds": time.perf_counter() - start,
+                    "validation": scores,
+                }
             )
             (output / "results.json").write_text(json.dumps(results, indent=2))
     return results
@@ -163,20 +163,20 @@ def smoke_datasets():
     datasets = []
     for part in range(3):
         samples = [
-            dict(
-                patient_id=f"{part}_{i}",
-                signal=torch.randn(1, 128).tolist(),
-                label=i % 2,
-            )
+            {
+                "patient_id": f"{part}_{i}",
+                "signal": torch.randn(1, 128).tolist(),
+                "label": i % 2,
+            }
             for i in range(4)
         ]
         options = (
             {}
             if not datasets
-            else dict(
-                input_processors=datasets[0].input_processors,
-                output_processors=datasets[0].output_processors,
-            )
+            else {
+                "input_processors": datasets[0].input_processors,
+                "output_processors": datasets[0].output_processors,
+            }
         )
         datasets.append(
             create_sample_dataset(
