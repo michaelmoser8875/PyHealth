@@ -1,0 +1,13 @@
+# First install the integrated team PyHealth checkout with pip install -e .
+# CUDA users: install a matching torch/torchvision/torchaudio CUDA build first.
+# These constraints do not choose a CUDA toolkit/build or guarantee compatibility.
+numpy>=2.1,<3
+soundfile>=0.12,<1
+scikit-learn>=1.6,<2
+tqdm>=4.66
+torchaudio>=2.10
+torchcodec>=0.10
+pytest>=8,<10
+matplotlib>=3.8,<4
+jupyterlab>=4,<5
+ipykernel>=6,<8

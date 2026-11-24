@@ -1,0 +1,1169 @@
+{
+  "version": 1,
+  "source_csv_sha256": "776044cf8c9739914a15f1b3977a246e8c866a92ef7f60e0ab9713d215cfed0b",
+  "task": {
+    "disease": "AS",
+    "other_disease_policy": "exclude"
+  },
+  "test_seed": 42,
+  "test_fraction": 0.2,
+  "validation_fraction_of_remaining": 0.2,
+  "stratified_by": "patient_binary_label",
+  "patients": {
+    "patient_001": {
+      "label": 1,
+      "recordings": [
+        "train/MD_001_sup_Mit.wav",
+        "train/MD_001_sup_Tri.wav",
+        "train/MD_001_sup_Pul.wav",
+        "train/MD_001_sup_Aor.wav",
+        "train/MD_001_sit_Mit.wav",
+        "train/MD_001_sit_Tri.wav",
+        "train/MD_001_sit_Pul.wav",
+        "train/MD_001_sit_Aor.wav"
+      ]
+    },
+    "patient_003": {
+      "label": 1,
+      "recordings": [
+        "train/MD_003_sup_Mit.wav",
+        "train/MD_003_sup_Tri.wav",
+        "train/MD_003_sup_Pul.wav",
+        "train/MD_003_sup_Aor.wav",
+        "train/MD_003_sit_Mit.wav",
+        "train/MD_003_sit_Tri.wav",
+        "train/MD_003_sit_Pul.wav",
+        "train/MD_003_sit_Aor.wav"
+      ]
+    },
+    "patient_005": {
+      "label": 1,
+      "recordings": [
+        "train/AS_005_sup_Mit.wav",
+        "train/AS_005_sup_Tri.wav",
+        "train/AS_005_sup_Pul.wav",
+        "train/AS_005_sup_Aor.wav",
+        "train/AS_005_sit_Mit.wav",
+        "train/AS_005_sit_Tri.wav",
+        "train/AS_005_sit_Pul.wav",
+        "train/AS_005_sit_Aor.wav"
+      ]
+    },
+    "patient_007": {
+      "label": 1,
+      "recordings": [
+        "train/MD_007_sup_Mit.wav",
+        "train/MD_007_sup_Tri.wav",
+        "train/MD_007_sup_Pul.wav",
+        "train/MD_007_sup_Aor.wav",
+        "train/MD_007_sit_Mit.wav",
+        "train/MD_007_sit_Tri.wav",
+        "train/MD_007_sit_Pul.wav",
+        "train/MD_007_sit_Aor.wav"
+      ]
+    },
+    "patient_009": {
+      "label": 1,
+      "recordings": [
+        "train/MD_009_sup_Mit.wav",
+        "train/MD_009_sup_Tri.wav",
+        "train/MD_009_sup_Pul.wav",
+        "train/MD_009_sup_Aor.wav",
+        "train/MD_009_sit_Mit.wav",
+        "train/MD_009_sit_Tri.wav",
+        "train/MD_009_sit_Pul.wav",
+        "train/MD_009_sit_Aor.wav"
+      ]
+    },
+    "patient_013": {
+      "label": 1,
+      "recordings": [
+        "train/MD_013_sup_Mit.wav",
+        "train/MD_013_sup_Tri.wav",
+        "train/MD_013_sup_Pul.wav",
+        "train/MD_013_sup_Aor.wav",
+        "train/MD_013_sit_Mit.wav",
+        "train/MD_013_sit_Tri.wav",
+        "train/MD_013_sit_Pul.wav",
+        "train/MD_013_sit_Aor.wav"
+      ]
+    },
+    "patient_015": {
+      "label": 1,
+      "recordings": [
+        "train/AS_015_sup_Mit.wav",
+        "train/AS_015_sup_Tri.wav",
+        "train/AS_015_sup_Pul.wav",
+        "train/AS_015_sup_Aor.wav",
+        "train/AS_015_sit_Mit.wav",
+        "train/AS_015_sit_Tri.wav",
+        "train/AS_015_sit_Pul.wav",
+        "train/AS_015_sit_Aor.wav"
+      ]
+    },
+    "patient_018": {
+      "label": 1,
+      "recordings": [
+        "train/MD_018_sup_Mit.wav",
+        "train/MD_018_sup_Tri.wav",
+        "train/MD_018_sup_Pul.wav",
+        "train/MD_018_sup_Aor.wav",
+        "train/MD_018_sit_Mit.wav",
+        "train/MD_018_sit_Tri.wav",
+        "train/MD_018_sit_Pul.wav",
+        "train/MD_018_sit_Aor.wav"
+      ]
+    },
+    "patient_019": {
+      "label": 1,
+      "recordings": [
+        "train/MD_019_sup_Mit.wav",
+        "train/MD_019_sup_Tri.wav",
+        "train/MD_019_sup_Pul.wav",
+        "train/MD_019_sup_Aor.wav",
+        "train/MD_019_sit_Mit.wav",
+        "train/MD_019_sit_Tri.wav",
+        "train/MD_019_sit_Pul.wav",
+        "train/MD_019_sit_Aor.wav"
+      ]
+    },
+    "patient_020": {
+      "label": 1,
+      "recordings": [
+        "train/MD_020_sup_Mit.wav",
+        "train/MD_020_sup_Tri.wav",
+        "train/MD_020_sup_Pul.wav",
+        "train/MD_020_sup_Aor.wav",
+        "train/MD_020_sit_Mit.wav",
+        "train/MD_020_sit_Tri.wav",
+        "train/MD_020_sit_Pul.wav",
+        "train/MD_020_sit_Aor.wav"
+      ]
+    },
+    "patient_021": {
+      "label": 1,
+      "recordings": [
+        "train/MD_021_sup_Mit.wav",
+        "train/MD_021_sup_Tri.wav",
+        "train/MD_021_sup_Pul.wav",
+        "train/MD_021_sup_Aor.wav",
+        "train/MD_021_sit_Mit.wav",
+        "train/MD_021_sit_Tri.wav",
+        "train/MD_021_sit_Pul.wav",
+        "train/MD_021_sit_Aor.wav"
+      ]
+    },
+    "patient_023": {
+      "label": 1,
+      "recordings": [
+        "train/MD_023_sup_Mit.wav",
+        "train/MD_023_sup_Tri.wav",
+        "train/MD_023_sup_Pul.wav",
+        "train/MD_023_sup_Aor.wav",
+        "train/MD_023_sit_Mit.wav",
+        "train/MD_023_sit_Tri.wav",
+        "train/MD_023_sit_Pul.wav",
+        "train/MD_023_sit_Aor.wav"
+      ]
+    },
+    "patient_025": {
+      "label": 1,
+      "recordings": [
+        "train/MD_025_sup_Mit.wav",
+        "train/MD_025_sup_Tri.wav",
+        "train/MD_025_sup_Pul.wav",
+        "train/MD_025_sup_Aor.wav",
+        "train/MD_025_sit_Mit.wav",
+        "train/MD_025_sit_Tri.wav",
+        "train/MD_025_sit_Pul.wav",
+        "train/MD_025_sit_Aor.wav"
+      ]
+    },
+    "patient_031": {
+      "label": 1,
+      "recordings": [
+        "train/MD_031_sup_Mit.wav",
+        "train/MD_031_sup_Tri.wav",
+        "train/MD_031_sup_Pul.wav",
+        "train/MD_031_sup_Aor.wav",
+        "train/MD_031_sit_Mit.wav",
+        "train/MD_031_sit_Tri.wav",
+        "train/MD_031_sit_Pul.wav",
+        "train/MD_031_sit_Aor.wav"
+      ]
+    },
+    "patient_032": {
+      "label": 1,
+      "recordings": [
+        "train/MD_032_sup_Mit.wav",
+        "train/MD_032_sup_Tri.wav",
+        "train/MD_032_sup_Pul.wav",
+        "train/MD_032_sup_Aor.wav",
+        "train/MD_032_sit_Mit.wav",
+        "train/MD_032_sit_Tri.wav",
+        "train/MD_032_sit_Pul.wav",
+        "train/MD_032_sit_Aor.wav"
+      ]
+    },
+    "patient_035": {
+      "label": 1,
+      "recordings": [
+        "train/MD_035_sup_Mit.wav",
+        "train/MD_035_sup_Tri.wav",
+        "train/MD_035_sup_Pul.wav",
+        "train/MD_035_sup_Aor.wav",
+        "train/MD_035_sit_Mit.wav",
+        "train/MD_035_sit_Tri.wav",
+        "train/MD_035_sit_Pul.wav",
+        "train/MD_035_sit_Aor.wav"
+      ]
+    },
+    "patient_039": {
+      "label": 1,
+      "recordings": [
+        "train/MD_039_sup_Mit.wav",
+        "train/MD_039_sup_Tri.wav",
+        "train/MD_039_sup_Pul.wav",
+        "train/MD_039_sup_Aor.wav",
+        "train/MD_039_sit_Mit.wav",
+        "train/MD_039_sit_Tri.wav",
+        "train/MD_039_sit_Pul.wav",
+        "train/MD_039_sit_Aor.wav"
+      ]
+    },
+    "patient_042": {
+      "label": 1,
+      "recordings": [
+        "train/MD_042_sup_Mit.wav",
+        "train/MD_042_sup_Tri.wav",
+        "train/MD_042_sup_Pul.wav",
+        "train/MD_042_sup_Aor.wav",
+        "train/MD_042_sit_Mit.wav",
+        "train/MD_042_sit_Tri.wav",
+        "train/MD_042_sit_Pul.wav",
+        "train/MD_042_sit_Aor.wav"
+      ]
+    },
+    "patient_050": {
+      "label": 1,
+      "recordings": [
+        "train/MD_050_sup_Mit.wav",
+        "train/MD_050_sup_Tri.wav",
+        "train/MD_050_sup_Pul.wav",
+        "train/MD_050_sup_Aor.wav",
+        "train/MD_050_sit_Mit.wav",
+        "train/MD_050_sit_Tri.wav",
+        "train/MD_050_sit_Pul.wav",
+        "train/MD_050_sit_Aor.wav"
+      ]
+    },
+    "patient_054": {
+      "label": 1,
+      "recordings": [
+        "train/AS_054_sup_Mit.wav",
+        "train/AS_054_sup_Tri.wav",
+        "train/AS_054_sup_Pul.wav",
+        "train/AS_054_sup_Aor.wav",
+        "train/AS_054_sit_Mit.wav",
+        "train/AS_054_sit_Tri.wav",
+        "train/AS_054_sit_Pul.wav",
+        "train/AS_054_sit_Aor.wav"
+      ]
+    },
+    "patient_056": {
+      "label": 1,
+      "recordings": [
+        "train/AS_056_sup_Mit.wav",
+        "train/AS_056_sup_Tri.wav",
+        "train/AS_056_sup_Pul.wav",
+        "train/AS_056_sup_Aor.wav",
+        "train/AS_056_sit_Mit.wav",
+        "train/AS_056_sit_Tri.wav",
+        "train/AS_056_sit_Pul.wav",
+        "train/AS_056_sit_Aor.wav"
+      ]
+    },
+    "patient_057": {
+      "label": 1,
+      "recordings": [
+        "train/MD_057_sup_Mit.wav",
+        "train/MD_057_sup_Tri.wav",
+        "train/MD_057_sup_Pul.wav",
+        "train/MD_057_sup_Aor.wav",
+        "train/MD_057_sit_Mit.wav",
+        "train/MD_057_sit_Tri.wav",
+        "train/MD_057_sit_Pul.wav",
+        "train/MD_057_sit_Aor.wav"
+      ]
+    },
+    "patient_060": {
+      "label": 1,
+      "recordings": [
+        "train/AS_060_sup_Mit.wav",
+        "train/AS_060_sup_Tri.wav",
+        "train/AS_060_sup_Pul.wav",
+        "train/AS_060_sup_Aor.wav",
+        "train/AS_060_sit_Mit.wav",
+        "train/AS_060_sit_Tri.wav",
+        "train/AS_060_sit_Pul.wav",
+        "train/AS_060_sit_Aor.wav"
+      ]
+    },
+    "patient_064": {
+      "label": 1,
+      "recordings": [
+        "train/AS_064_sup_Mit.wav",
+        "train/AS_064_sup_Tri.wav",
+        "train/AS_064_sup_Pul.wav",
+        "train/AS_064_sup_Aor.wav",
+        "train/AS_064_sit_Mit.wav",
+        "train/AS_064_sit_Tri.wav",
+        "train/AS_064_sit_Pul.wav",
+        "train/AS_064_sit_Aor.wav"
+      ]
+    },
+    "patient_065": {
+      "label": 1,
+      "recordings": [
+        "train/MD_065_sup_Mit.wav",
+        "train/MD_065_sup_Tri.wav",
+        "train/MD_065_sup_Pul.wav",
+        "train/MD_065_sup_Aor.wav",
+        "train/MD_065_sit_Mit.wav",
+        "train/MD_065_sit_Tri.wav",
+        "train/MD_065_sit_Pul.wav",
+        "train/MD_065_sit_Aor.wav"
+      ]
+    },
+    "patient_066": {
+      "label": 1,
+      "recordings": [
+        "train/AS_066_sup_Mit.wav",
+        "train/AS_066_sup_Tri.wav",
+        "train/AS_066_sup_Pul.wav",
+        "train/AS_066_sup_Aor.wav",
+        "train/AS_066_sit_Mit.wav",
+        "train/AS_066_sit_Tri.wav",
+        "train/AS_066_sit_Pul.wav",
+        "train/AS_066_sit_Aor.wav"
+      ]
+    },
+    "patient_070": {
+      "label": 1,
+      "recordings": [
+        "train/MD_070_sup_Mit.wav",
+        "train/MD_070_sup_Tri.wav",
+        "train/MD_070_sup_Pul.wav",
+        "train/MD_070_sup_Aor.wav",
+        "train/MD_070_sit_Mit.wav",
+        "train/MD_070_sit_Tri.wav",
+        "train/MD_070_sit_Pul.wav",
+        "train/MD_070_sit_Aor.wav"
+      ]
+    },
+    "patient_071": {
+      "label": 1,
+      "recordings": [
+        "train/MD_071_sup_Mit.wav",
+        "train/MD_071_sup_Tri.wav",
+        "train/MD_071_sup_Pul.wav",
+        "train/MD_071_sup_Aor.wav",
+        "train/MD_071_sit_Mit.wav",
+        "train/MD_071_sit_Tri.wav",
+        "train/MD_071_sit_Pul.wav",
+        "train/MD_071_sit_Aor.wav"
+      ]
+    },
+    "patient_072": {
+      "label": 1,
+      "recordings": [
+        "train/MD_072_sup_Mit.wav",
+        "train/MD_072_sup_Tri.wav",
+        "train/MD_072_sup_Pul.wav",
+        "train/MD_072_sup_Aor.wav",
+        "train/MD_072_sit_Mit.wav",
+        "train/MD_072_sit_Tri.wav",
+        "train/MD_072_sit_Pul.wav",
+        "train/MD_072_sit_Aor.wav"
+      ]
+    },
+    "patient_073": {
+      "label": 1,
+      "recordings": [
+        "train/AS_073_sup_Mit.wav",
+        "train/AS_073_sup_Tri.wav",
+        "train/AS_073_sup_Pul.wav",
+        "train/AS_073_sup_Aor.wav",
+        "train/AS_073_sit_Mit.wav",
+        "train/AS_073_sit_Tri.wav",
+        "train/AS_073_sit_Pul.wav",
+        "train/AS_073_sit_Aor.wav"
+      ]
+    },
+    "patient_075": {
+      "label": 1,
+      "recordings": [
+        "train/MD_075_sup_Mit.wav",
+        "train/MD_075_sup_Tri.wav",
+        "train/MD_075_sup_Pul.wav",
+        "train/MD_075_sup_Aor.wav",
+        "train/MD_075_sit_Mit.wav",
+        "train/MD_075_sit_Tri.wav",
+        "train/MD_075_sit_Pul.wav",
+        "train/MD_075_sit_Aor.wav"
+      ]
+    },
+    "patient_076": {
+      "label": 1,
+      "recordings": [
+        "train/MD_076_sup_Mit.wav",
+        "train/MD_076_sup_Tri.wav",
+        "train/MD_076_sup_Pul.wav",
+        "train/MD_076_sup_Aor.wav",
+        "train/MD_076_sit_Mit.wav",
+        "train/MD_076_sit_Tri.wav",
+        "train/MD_076_sit_Pul.wav",
+        "train/MD_076_sit_Aor.wav"
+      ]
+    },
+    "patient_078": {
+      "label": 1,
+      "recordings": [
+        "train/MD_078_sup_Mit.wav",
+        "train/MD_078_sup_Tri.wav",
+        "train/MD_078_sup_Pul.wav",
+        "train/MD_078_sup_Aor.wav",
+        "train/MD_078_sit_Mit.wav",
+        "train/MD_078_sit_Tri.wav",
+        "train/MD_078_sit_Pul.wav",
+        "train/MD_078_sit_Aor.wav"
+      ]
+    },
+    "patient_080": {
+      "label": 1,
+      "recordings": [
+        "train/MD_080_sup_Mit.wav",
+        "train/MD_080_sup_Tri.wav",
+        "train/MD_080_sup_Pul.wav",
+        "train/MD_080_sup_Aor.wav",
+        "train/MD_080_sit_Mit.wav",
+        "train/MD_080_sit_Tri.wav",
+        "train/MD_080_sit_Pul.wav",
+        "train/MD_080_sit_Aor.wav"
+      ]
+    },
+    "patient_083": {
+      "label": 1,
+      "recordings": [
+        "train/MD_083_sup_Mit.wav",
+        "train/MD_083_sup_Tri.wav",
+        "train/MD_083_sup_Pul.wav",
+        "train/MD_083_sup_Aor.wav",
+        "train/MD_083_sit_Mit.wav",
+        "train/MD_083_sit_Tri.wav",
+        "train/MD_083_sit_Pul.wav",
+        "train/MD_083_sit_Aor.wav"
+      ]
+    },
+    "patient_084": {
+      "label": 1,
+      "recordings": [
+        "train/MD_084_sup_Mit.wav",
+        "train/MD_084_sup_Tri.wav",
+        "train/MD_084_sup_Pul.wav",
+        "train/MD_084_sup_Aor.wav",
+        "train/MD_084_sit_Mit.wav",
+        "train/MD_084_sit_Tri.wav",
+        "train/MD_084_sit_Pul.wav",
+        "train/MD_084_sit_Aor.wav"
+      ]
+    },
+    "patient_087": {
+      "label": 1,
+      "recordings": [
+        "train/MD_087_sup_Mit.wav",
+        "train/MD_087_sup_Tri.wav",
+        "train/MD_087_sup_Pul.wav",
+        "train/MD_087_sup_Aor.wav",
+        "train/MD_087_sit_Mit.wav",
+        "train/MD_087_sit_Tri.wav",
+        "train/MD_087_sit_Pul.wav",
+        "train/MD_087_sit_Aor.wav"
+      ]
+    },
+    "patient_089": {
+      "label": 0,
+      "recordings": [
+        "train/N_089_sup_Mit.wav",
+        "train/N_089_sup_Tri.wav",
+        "train/N_089_sup_Pul.wav",
+        "train/N_089_sup_Aor.wav",
+        "train/N_089_sit_Mit.wav",
+        "train/N_089_sit_Tri.wav",
+        "train/N_089_sit_Pul.wav",
+        "train/N_089_sit_Aor.wav"
+      ]
+    },
+    "patient_090": {
+      "label": 0,
+      "recordings": [
+        "train/N_090_sup_Mit.wav",
+        "train/N_090_sup_Tri.wav",
+        "train/N_090_sup_Pul.wav",
+        "train/N_090_sup_Aor.wav",
+        "train/N_090_sit_Mit.wav",
+        "train/N_090_sit_Tri.wav",
+        "train/N_090_sit_Pul.wav",
+        "train/N_090_sit_Aor.wav"
+      ]
+    },
+    "patient_091": {
+      "label": 0,
+      "recordings": [
+        "train/N_091_sup_Mit.wav",
+        "train/N_091_sup_Tri.wav",
+        "train/N_091_sup_Pul.wav",
+        "train/N_091_sup_Aor.wav",
+        "train/N_091_sit_Mit.wav",
+        "train/N_091_sit_Tri.wav",
+        "train/N_091_sit_Pul.wav",
+        "train/N_091_sit_Aor.wav"
+      ]
+    },
+    "patient_092": {
+      "label": 0,
+      "recordings": [
+        "train/N_092_sup_Mit.wav",
+        "train/N_092_sup_Tri.wav",
+        "train/N_092_sup_Pul.wav",
+        "train/N_092_sup_Aor.wav",
+        "train/N_092_sit_Mit.wav",
+        "train/N_092_sit_Tri.wav",
+        "train/N_092_sit_Pul.wav",
+        "train/N_092_sit_Aor.wav"
+      ]
+    },
+    "patient_093": {
+      "label": 0,
+      "recordings": [
+        "train/N_093_sup_Mit.wav",
+        "train/N_093_sup_Tri.wav",
+        "train/N_093_sup_Pul.wav",
+        "train/N_093_sup_Aor.wav",
+        "train/N_093_sit_Mit.wav",
+        "train/N_093_sit_Tri.wav",
+        "train/N_093_sit_Pul.wav",
+        "train/N_093_sit_Aor.wav"
+      ]
+    },
+    "patient_094": {
+      "label": 0,
+      "recordings": [
+        "train/N_094_sup_Mit.wav",
+        "train/N_094_sup_Tri.wav",
+        "train/N_094_sup_Pul.wav",
+        "train/N_094_sup_Aor.wav",
+        "train/N_094_sit_Mit.wav",
+        "train/N_094_sit_Tri.wav",
+        "train/N_094_sit_Pul.wav",
+        "train/N_094_sit_Aor.wav"
+      ]
+    },
+    "patient_095": {
+      "label": 0,
+      "recordings": [
+        "train/N_095_sup_Mit.wav",
+        "train/N_095_sup_Tri.wav",
+        "train/N_095_sup_Pul.wav",
+        "train/N_095_sup_Aor.wav",
+        "train/N_095_sit_Mit.wav",
+        "train/N_095_sit_Tri.wav",
+        "train/N_095_sit_Pul.wav",
+        "train/N_095_sit_Aor.wav"
+      ]
+    },
+    "patient_096": {
+      "label": 0,
+      "recordings": [
+        "train/N_096_sup_Mit.wav",
+        "train/N_096_sup_Tri.wav",
+        "train/N_096_sup_Pul.wav",
+        "train/N_096_sup_Aor.wav",
+        "train/N_096_sit_Mit.wav",
+        "train/N_096_sit_Tri.wav",
+        "train/N_096_sit_Pul.wav",
+        "train/N_096_sit_Aor.wav"
+      ]
+    },
+    "patient_097": {
+      "label": 0,
+      "recordings": [
+        "train/N_097_sup_Mit.wav",
+        "train/N_097_sup_Tri.wav",
+        "train/N_097_sup_Pul.wav",
+        "train/N_097_sup_Aor.wav",
+        "train/N_097_sit_Mit.wav",
+        "train/N_097_sit_Tri.wav",
+        "train/N_097_sit_Pul.wav",
+        "train/N_097_sit_Aor.wav"
+      ]
+    },
+    "patient_098": {
+      "label": 0,
+      "recordings": [
+        "train/N_098_sup_Mit.wav",
+        "train/N_098_sup_Tri.wav",
+        "train/N_098_sup_Pul.wav",
+        "train/N_098_sup_Aor.wav",
+        "train/N_098_sit_Mit.wav",
+        "train/N_098_sit_Tri.wav",
+        "train/N_098_sit_Pul.wav",
+        "train/N_098_sit_Aor.wav"
+      ]
+    },
+    "patient_099": {
+      "label": 0,
+      "recordings": [
+        "train/N_099_sup_Mit.wav",
+        "train/N_099_sup_Tri.wav",
+        "train/N_099_sup_Pul.wav",
+        "train/N_099_sup_Aor.wav",
+        "train/N_099_sit_Mit.wav",
+        "train/N_099_sit_Tri.wav",
+        "train/N_099_sit_Pul.wav",
+        "train/N_099_sit_Aor.wav"
+      ]
+    },
+    "patient_100": {
+      "label": 0,
+      "recordings": [
+        "train/N_100_sup_Mit.wav",
+        "train/N_100_sup_Tri.wav",
+        "train/N_100_sup_Pul.wav",
+        "train/N_100_sup_Aor.wav",
+        "train/N_100_sit_Mit.wav",
+        "train/N_100_sit_Tri.wav",
+        "train/N_100_sit_Pul.wav",
+        "train/N_100_sit_Aor.wav"
+      ]
+    },
+    "patient_101": {
+      "label": 0,
+      "recordings": [
+        "train/N_101_sup_Mit.wav",
+        "train/N_101_sup_Tri.wav",
+        "train/N_101_sup_Pul.wav",
+        "train/N_101_sup_Aor.wav",
+        "train/N_101_sit_Mit.wav",
+        "train/N_101_sit_Tri.wav",
+        "train/N_101_sit_Pul.wav",
+        "train/N_101_sit_Aor.wav"
+      ]
+    },
+    "patient_102": {
+      "label": 0,
+      "recordings": [
+        "train/N_102_sup_Mit.wav",
+        "train/N_102_sup_Tri.wav",
+        "train/N_102_sup_Pul.wav",
+        "train/N_102_sup_Aor.wav",
+        "train/N_102_sit_Mit.wav",
+        "train/N_102_sit_Tri.wav",
+        "train/N_102_sit_Pul.wav",
+        "train/N_102_sit_Aor.wav"
+      ]
+    },
+    "patient_103": {
+      "label": 0,
+      "recordings": [
+        "train/N_103_sup_Mit.wav",
+        "train/N_103_sup_Tri.wav",
+        "train/N_103_sup_Pul.wav",
+        "train/N_103_sup_Aor.wav",
+        "train/N_103_sit_Mit.wav",
+        "train/N_103_sit_Tri.wav",
+        "train/N_103_sit_Pul.wav",
+        "train/N_103_sit_Aor.wav"
+      ]
+    },
+    "patient_104": {
+      "label": 0,
+      "recordings": [
+        "train/N_104_sup_Mit.wav",
+        "train/N_104_sup_Tri.wav",
+        "train/N_104_sup_Pul.wav",
+        "train/N_104_sup_Aor.wav",
+        "train/N_104_sit_Mit.wav",
+        "train/N_104_sit_Tri.wav",
+        "train/N_104_sit_Pul.wav",
+        "train/N_104_sit_Aor.wav"
+      ]
+    },
+    "patient_105": {
+      "label": 0,
+      "recordings": [
+        "train/N_105_sup_Mit.wav",
+        "train/N_105_sup_Tri.wav",
+        "train/N_105_sup_Pul.wav",
+        "train/N_105_sup_Aor.wav",
+        "train/N_105_sit_Mit.wav",
+        "train/N_105_sit_Tri.wav",
+        "train/N_105_sit_Pul.wav",
+        "train/N_105_sit_Aor.wav"
+      ]
+    },
+    "patient_106": {
+      "label": 0,
+      "recordings": [
+        "train/N_106_sup_Mit.wav",
+        "train/N_106_sup_Tri.wav",
+        "train/N_106_sup_Pul.wav",
+        "train/N_106_sup_Aor.wav",
+        "train/N_106_sit_Mit.wav",
+        "train/N_106_sit_Tri.wav",
+        "train/N_106_sit_Pul.wav",
+        "train/N_106_sit_Aor.wav"
+      ]
+    },
+    "patient_107": {
+      "label": 0,
+      "recordings": [
+        "train/N_107_sup_Mit.wav",
+        "train/N_107_sup_Tri.wav",
+        "train/N_107_sup_Pul.wav",
+        "train/N_107_sup_Aor.wav",
+        "train/N_107_sit_Mit.wav",
+        "train/N_107_sit_Tri.wav",
+        "train/N_107_sit_Pul.wav",
+        "train/N_107_sit_Aor.wav"
+      ]
+    },
+    "patient_108": {
+      "label": 0,
+      "recordings": [
+        "train/N_108_sup_Mit.wav",
+        "train/N_108_sup_Tri.wav",
+        "train/N_108_sup_Pul.wav",
+        "train/N_108_sup_Aor.wav",
+        "train/N_108_sit_Mit.wav",
+        "train/N_108_sit_Tri.wav",
+        "train/N_108_sit_Pul.wav",
+        "train/N_108_sit_Aor.wav"
+      ]
+    },
+    "patient_109": {
+      "label": 0,
+      "recordings": [
+        "train/N_109_sup_Mit.wav",
+        "train/N_109_sup_Tri.wav",
+        "train/N_109_sup_Pul.wav",
+        "train/N_109_sup_Aor.wav",
+        "train/N_109_sit_Mit.wav",
+        "train/N_109_sit_Tri.wav",
+        "train/N_109_sit_Pul.wav",
+        "train/N_109_sit_Aor.wav"
+      ]
+    }
+  },
+  "excluded_patient_ids": [
+    "patient_002",
+    "patient_004",
+    "patient_006",
+    "patient_008",
+    "patient_010",
+    "patient_011",
+    "patient_012",
+    "patient_014",
+    "patient_016",
+    "patient_017",
+    "patient_022",
+    "patient_024",
+    "patient_026",
+    "patient_027",
+    "patient_028",
+    "patient_029",
+    "patient_030",
+    "patient_033",
+    "patient_034",
+    "patient_036",
+    "patient_037",
+    "patient_038",
+    "patient_040",
+    "patient_041",
+    "patient_043",
+    "patient_044",
+    "patient_045",
+    "patient_046",
+    "patient_047",
+    "patient_048",
+    "patient_049",
+    "patient_051",
+    "patient_052",
+    "patient_053",
+    "patient_055",
+    "patient_058",
+    "patient_059",
+    "patient_061",
+    "patient_062",
+    "patient_063",
+    "patient_067",
+    "patient_068",
+    "patient_069",
+    "patient_074",
+    "patient_077",
+    "patient_079",
+    "patient_081",
+    "patient_082",
+    "patient_085",
+    "patient_086",
+    "patient_088"
+  ],
+  "runs": [
+    {
+      "run_index": 0,
+      "split_seed": 0,
+      "training_seed": 0,
+      "train": [
+        "patient_001",
+        "patient_007",
+        "patient_009",
+        "patient_013",
+        "patient_015",
+        "patient_020",
+        "patient_021",
+        "patient_025",
+        "patient_031",
+        "patient_032",
+        "patient_035",
+        "patient_042",
+        "patient_050",
+        "patient_060",
+        "patient_064",
+        "patient_066",
+        "patient_070",
+        "patient_071",
+        "patient_075",
+        "patient_076",
+        "patient_083",
+        "patient_084",
+        "patient_087",
+        "patient_090",
+        "patient_091",
+        "patient_092",
+        "patient_093",
+        "patient_096",
+        "patient_097",
+        "patient_098",
+        "patient_100",
+        "patient_101",
+        "patient_102",
+        "patient_105",
+        "patient_106",
+        "patient_109"
+      ],
+      "validation": [
+        "patient_005",
+        "patient_018",
+        "patient_019",
+        "patient_039",
+        "patient_054",
+        "patient_073",
+        "patient_089",
+        "patient_094",
+        "patient_104",
+        "patient_107"
+      ],
+      "test": [
+        "patient_003",
+        "patient_023",
+        "patient_056",
+        "patient_057",
+        "patient_065",
+        "patient_072",
+        "patient_078",
+        "patient_080",
+        "patient_095",
+        "patient_099",
+        "patient_103",
+        "patient_108"
+      ]
+    },
+    {
+      "run_index": 1,
+      "split_seed": 1,
+      "training_seed": 1,
+      "train": [
+        "patient_001",
+        "patient_005",
+        "patient_007",
+        "patient_009",
+        "patient_013",
+        "patient_018",
+        "patient_019",
+        "patient_020",
+        "patient_021",
+        "patient_032",
+        "patient_035",
+        "patient_039",
+        "patient_042",
+        "patient_050",
+        "patient_054",
+        "patient_064",
+        "patient_070",
+        "patient_071",
+        "patient_073",
+        "patient_075",
+        "patient_076",
+        "patient_083",
+        "patient_084",
+        "patient_089",
+        "patient_090",
+        "patient_091",
+        "patient_092",
+        "patient_093",
+        "patient_096",
+        "patient_097",
+        "patient_100",
+        "patient_101",
+        "patient_105",
+        "patient_106",
+        "patient_107",
+        "patient_109"
+      ],
+      "validation": [
+        "patient_015",
+        "patient_025",
+        "patient_031",
+        "patient_060",
+        "patient_066",
+        "patient_087",
+        "patient_094",
+        "patient_098",
+        "patient_102",
+        "patient_104"
+      ],
+      "test": [
+        "patient_003",
+        "patient_023",
+        "patient_056",
+        "patient_057",
+        "patient_065",
+        "patient_072",
+        "patient_078",
+        "patient_080",
+        "patient_095",
+        "patient_099",
+        "patient_103",
+        "patient_108"
+      ]
+    },
+    {
+      "run_index": 2,
+      "split_seed": 2,
+      "training_seed": 2,
+      "train": [
+        "patient_001",
+        "patient_005",
+        "patient_007",
+        "patient_020",
+        "patient_021",
+        "patient_031",
+        "patient_032",
+        "patient_035",
+        "patient_039",
+        "patient_042",
+        "patient_050",
+        "patient_054",
+        "patient_060",
+        "patient_064",
+        "patient_066",
+        "patient_070",
+        "patient_071",
+        "patient_073",
+        "patient_075",
+        "patient_076",
+        "patient_083",
+        "patient_084",
+        "patient_087",
+        "patient_089",
+        "patient_090",
+        "patient_091",
+        "patient_092",
+        "patient_093",
+        "patient_094",
+        "patient_096",
+        "patient_097",
+        "patient_100",
+        "patient_101",
+        "patient_102",
+        "patient_104",
+        "patient_106"
+      ],
+      "validation": [
+        "patient_009",
+        "patient_013",
+        "patient_015",
+        "patient_018",
+        "patient_019",
+        "patient_025",
+        "patient_098",
+        "patient_105",
+        "patient_107",
+        "patient_109"
+      ],
+      "test": [
+        "patient_003",
+        "patient_023",
+        "patient_056",
+        "patient_057",
+        "patient_065",
+        "patient_072",
+        "patient_078",
+        "patient_080",
+        "patient_095",
+        "patient_099",
+        "patient_103",
+        "patient_108"
+      ]
+    },
+    {
+      "run_index": 3,
+      "split_seed": 3,
+      "training_seed": 3,
+      "train": [
+        "patient_005",
+        "patient_007",
+        "patient_009",
+        "patient_013",
+        "patient_015",
+        "patient_020",
+        "patient_021",
+        "patient_025",
+        "patient_031",
+        "patient_035",
+        "patient_042",
+        "patient_050",
+        "patient_054",
+        "patient_060",
+        "patient_064",
+        "patient_070",
+        "patient_071",
+        "patient_073",
+        "patient_075",
+        "patient_076",
+        "patient_083",
+        "patient_084",
+        "patient_087",
+        "patient_089",
+        "patient_090",
+        "patient_091",
+        "patient_093",
+        "patient_094",
+        "patient_096",
+        "patient_097",
+        "patient_102",
+        "patient_104",
+        "patient_105",
+        "patient_106",
+        "patient_107",
+        "patient_109"
+      ],
+      "validation": [
+        "patient_001",
+        "patient_018",
+        "patient_019",
+        "patient_032",
+        "patient_039",
+        "patient_066",
+        "patient_092",
+        "patient_098",
+        "patient_100",
+        "patient_101"
+      ],
+      "test": [
+        "patient_003",
+        "patient_023",
+        "patient_056",
+        "patient_057",
+        "patient_065",
+        "patient_072",
+        "patient_078",
+        "patient_080",
+        "patient_095",
+        "patient_099",
+        "patient_103",
+        "patient_108"
+      ]
+    },
+    {
+      "run_index": 4,
+      "split_seed": 4,
+      "training_seed": 4,
+      "train": [
+        "patient_005",
+        "patient_007",
+        "patient_013",
+        "patient_015",
+        "patient_019",
+        "patient_020",
+        "patient_021",
+        "patient_031",
+        "patient_032",
+        "patient_035",
+        "patient_039",
+        "patient_042",
+        "patient_050",
+        "patient_054",
+        "patient_060",
+        "patient_064",
+        "patient_070",
+        "patient_071",
+        "patient_075",
+        "patient_076",
+        "patient_083",
+        "patient_084",
+        "patient_087",
+        "patient_089",
+        "patient_091",
+        "patient_092",
+        "patient_093",
+        "patient_096",
+        "patient_098",
+        "patient_100",
+        "patient_101",
+        "patient_102",
+        "patient_104",
+        "patient_105",
+        "patient_107",
+        "patient_109"
+      ],
+      "validation": [
+        "patient_001",
+        "patient_009",
+        "patient_018",
+        "patient_025",
+        "patient_066",
+        "patient_073",
+        "patient_090",
+        "patient_094",
+        "patient_097",
+        "patient_106"
+      ],
+      "test": [
+        "patient_003",
+        "patient_023",
+        "patient_056",
+        "patient_057",
+        "patient_065",
+        "patient_072",
+        "patient_078",
+        "patient_080",
+        "patient_095",
+        "patient_099",
+        "patient_103",
+        "patient_108"
+      ]
+    }
+  ],
+  "dataset_git_revision": "4745751855d15ff5fc9aaed29c32ad3ec7a5d409"
+}

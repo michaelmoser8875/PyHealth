@@ -1,0 +1,73 @@
+T9 reference preprocessing audit
+Reference revision: seitalab/SynPCG 1a5f600ce2a0a9e43514e20582da67081159a14a
+Read-only source audit. No training or user-repository edits performed.
+
+Confirmed classifier preprocessing order (src/clf/codes/data/dataloader.py):
+TRAIN: block-average downsample -> per-recording z-score -> random length
+alignment/crop -> mask -> shift -> polarity flip -> breathing addition ->
+stretch -> time-varying scaling -> tensor.
+VALIDATION/TEST: block-average downsample -> z-score -> center crop -> tensor.
+Short recordings use random left/right zero padding even in ExtractCenter;
+current real recordings exceed the configured input length, so that branch is
+not needed for the audited real data. Added safeguards must be documented.
+Transforms run on each dataset access, not once during cache creation.
+
+Exact AS values (exp0101 real, exp0109 synthetic, exp0125 fine-tuning):
+aug_mask_ratio = 0.0181159289847237
+max_shift_ratio = 0.4346179738701645
+flip_rate = 0.5845802085575055
+breathing_scale = 0.6182427761408714
+stretch_ratio = 0.2532909293183357
+scale_ratio = 1.3983082502360755
+RandomScaleSignal default scaler_freq=10, stored as 9 internally.
+Sine multiplier is not a constant positive amplitude multiplier and can be
+negative with the supplied settings. Do not silently simplify it.
+Breathing: Gaussian duration mean4/std1 seconds, clip1..8, Tukey alpha0.5,
+modulated Gaussian noise, repetition, peak normalization, random gain/crop.
+Mask width is fixed by ratio, with random location. Shift magnitude and
+direction are random. Flip is polarity inversion, not time reversal.
+Stretch uses np.interp and random crop or random zero padding.
+
+Important paper/source discrepancies:
+1. config.yaml classifier base has target_freq1000 and max_duration5;
+   AS experiment YAMLs do not override them; ParamManager applies base values.
+   Synthesis sample rate is separately8000. Existing team path is8kHz/10s.
+2. Paper reports max500 epochs; config.yaml main says1000 (search says500).
+3. Paper describes Normal-versus-AS. BUETDataset takes AS flag directly
+   without a Normal-only filter: its864-row CSV has296AS and568non-AS,
+   including other diseases. split_0: train552(200AS/352non-AS),
+   val136(48AS/88non-AS), test176(48AS/128non-AS).
+   Existing team AS/exclude cohort is464 recordings and a distinct frozen split.
+4. train.py synthetic data_lim10000, val_data_lim2500 (1250/class),
+   versus paper Table1 validation1000/class and team total2000 validation.
+5. Config specifies cosine scheduler, but no active scheduler.step call was
+   found in the inspected trainer paths; do not add cosine decay based solely
+   on config. Adam is constructed with the supplied learning rate.
+6. Training drop_last is conditional in reference loader; with a real cohort
+   smaller than512 and data_lim=None it can yield zero training batches.
+   New runner must explicitly avoid that failure and record its batch policy.
+
+Implementation consequences:
+- Keep generated full-waveform WAVs unchanged.
+- Do not try to recover full-real-recording random crops from first10s caches.
+- Runtime wrapper needs access to untruncated real audio, downsampling and
+  normalization BEFORE crop/augmentation, and validation center cropping.
+- Set model normalize=False when wrapper already matches reference z-score;
+  post-augmentation normalization changes the intended transform pipeline.
+- Verify exact numerical transform behavior with fixed RNG draws and tests;
+  handle zero-variance/non-finite inputs explicitly and log deliberate deviations.
+- Keep earlier smoke configs/checkpoints/results immutable; they validate the
+  previous8kHz/10s/no-augmentation profile, not a new preprocessing profile.
+- MPS throughput estimate is for80000 samples/example, not5000; rebenchmark
+  after changing input representation before choosing CUDA budgets.
+- Cohort policy, epoch cap, validation sample count, and input representation
+  require an explicit paper-versus-source choice, recorded in final configs.
+- No changes to existing saved cohort/split assignments without user decision.
+
+Source files locally inspected under work/reference-audit/SynPCG-<revision>/:
+config.yaml; src/common/augment.py; src/common/transform_funcs.py;
+src/common/param_manager.py; src/common/base_trainer.py;
+src/clf/codes/data/dataloader.py; src/clf/codes/data/dataset.py;
+src/clf/codes/trainer.py; src/clf/codes/run_train.py; src/clf/train.py;
+src/clf/exp_yamls/exp01s/exp0101.yaml,exp0109.yaml,exp0125.yaml;
+src/prep/dataset/file_link_table.csv.

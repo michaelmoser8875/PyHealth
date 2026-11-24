@@ -1,0 +1,10 @@
+{
+  "synthetic_pcg.py": "b7edad730e9c36aba4bcfd9ee8f98cf7eb2423724ef282404feeb77ec941704f",
+  "synthetic_manifest.py": "5954840e4f3c354ad3f90faec6100e4b23a3bdd3702c21aabf171eeab860f22b",
+  "synthetic_splits.py": "a0dca5be4039619ad88bb76f83db72f960979c324633d05e08a17c592cfca257",
+  "generate_dataset_cli.py": "3b97c374cea8fb4bb17f0d44ef51d358aad1a02be27d595a4f2f88dbda55bbed",
+  "test_synthetic_pcg.py": "8164f2c27411d4a358c8704686ce5dad44a34dc10f60a5e08c1c4ba1dd0af3d9",
+  "test_synthetic_manifest.py": "2082abc751c6d79e6efa6a8522389888e019fc7857bb188363fec2e5f82b6a40",
+  "test_synthetic_splits.py": "193067f9a5d76f2268e1ae2b7f8a544454b2c297a9c89d52fe985355e3d9ba87",
+  "synthetic_pcg_examples.ipynb": "40fed675e90aeca1001d12c9f09327823979c99f76689886c69045303debbe56"
+}
