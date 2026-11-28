@@ -31,6 +31,13 @@ from pyhealth.datasets import create_sample_dataset, split_by_patient_fixed_test
 from pyhealth.processors import AudioProcessor
 from pyhealth.tasks import BMDHSBinaryClassification
 
+try:
+    import torchaudio  # noqa: F401
+
+    TORCHAUDIO_AVAILABLE = True
+except ImportError:
+    TORCHAUDIO_AVAILABLE = False
+
 FLAGS = ["AS", "AR", "MR", "MS", "N"]
 
 
@@ -112,6 +119,7 @@ class TestBMDHSBinaryClassification(unittest.TestCase):
             with self.assertRaises(ValueError):
                 BMDHSBinaryClassification(**kwargs)
 
+    @unittest.skipUnless(TORCHAUDIO_AVAILABLE, "torchaudio not available")
     def test_signal_length_after_resample_and_crop(self):
         _, kwargs = BMDHSBinaryClassification.input_schema["signal"]
         signal = AudioProcessor(**kwargs).process(self.root / "rec_a.wav")
