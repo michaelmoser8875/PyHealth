@@ -356,3 +356,4 @@ API Reference
     models/pyhealth.models.TRACE
     models/pyhealth.models.MIRA
 
+    models/pyhealth.models.ResNet1D
